@@ -3,7 +3,6 @@
 #include "ConfigParser.h"
 
 extern ModConfigs iniData;
-extern RE::ActorValueInfo* avActionPoints;
 
 namespace HookLineAndSinker
 {

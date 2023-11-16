@@ -3,7 +3,6 @@
 
 CSimpleIniA ini(true, false, false);
 ModConfigs iniData;
-RE::ActorValueInfo* avActionPoints;
 
 extern "C" DLLEXPORT bool F4SEAPI F4SEPlugin_Query(const F4SE::QueryInterface* a_f4se, F4SE::PluginInfo* a_info)
 {
@@ -60,8 +59,6 @@ extern "C" DLLEXPORT bool F4SEAPI F4SEPlugin_Load(const F4SE::LoadInterface* a_f
 	HookLineAndSinker::RegisterHook(trampoline);
 
 	iniData.LoadConfigs(ini);
-
-	avActionPoints = (RE::ActorValueInfo*)RE::TESForm::GetFormByID(0x000002D5);
 
 	return true;
 }
